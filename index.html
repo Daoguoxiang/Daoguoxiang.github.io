@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="海南农业技术服务与农资供应：种苗销售、农资销售、农业灌溉规划设计安装、农产品销售，服务海南全省种植户。">
+<meta name="keywords" content="海南农业技术服务,种苗销售,百香果种苗,槟榔种苗,农资销售,农药化肥,农业灌溉,农产品销售">
+<title>稻果香农服社｜海南种苗·农资·灌溉·农产品</title>
+<style>
+  :root{
+    --green:#1e7a3c;
+    --green-dark:#145a2c;
+    --green-light:#eaf5ee;
+    --gold:#d9a441;
+    --text:#2b2b2b;
+    --muted:#666;
+    --bg:#f7faf8;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+    color:var(--text);
+    background:var(--bg);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
+
+  /* 顶部导航 */
+  header{
+    background:linear-gradient(135deg,var(--green-dark),var(--green));
+    color:#fff;
+    padding:16px 0;
+    position:sticky;top:0;z-index:100;
+    box-shadow:0 2px 12px rgba(0,0,0,.12);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;}
+  .brand{font-size:20px;font-weight:700;letter-spacing:1px;}
+  .brand small{display:block;font-size:11px;font-weight:400;opacity:.85;letter-spacing:2px;}
+  nav a{color:#fff;text-decoration:none;margin-left:22px;font-size:15px;opacity:.9;}
+  nav a:hover{opacity:1;border-bottom:2px solid var(--gold);}
+
+  /* Hero */
+  .hero{
+    background:linear-gradient(160deg,#0f4d24 0%,#1e7a3c 55%,#2c9b4f 100%);
+    color:#fff;text-align:center;padding:70px 20px;
+  }
+  .hero h1{font-size:38px;font-weight:800;letter-spacing:2px;margin-bottom:14px;}
+  .hero p{font-size:18px;opacity:.95;max-width:640px;margin:0 auto 8px;}
+  .hero .tag{margin-top:24px;}
+  .hero .tag span{
+    display:inline-block;background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.35);
+    padding:6px 16px;border-radius:30px;margin:5px;font-size:14px;
+  }
+  .cta{
+    display:inline-block;margin-top:30px;background:var(--gold);color:#3a2a05;
+    padding:14px 40px;border-radius:40px;font-size:17px;font-weight:700;
+    text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,.2);
+    transition:transform .15s;
+  }
+  .cta:hover{transform:translateY(-2px);}
+
+  /* 通用区块 */
+  section{padding:60px 0;}
+  section.alt{background:#fff;}
+  .sec-title{text-align:center;font-size:28px;font-weight:800;margin-bottom:8px;color:var(--green-dark);}
+  .sec-sub{text-align:center;color:var(--muted);margin-bottom:40px;font-size:15px;}
+
+  /* 服务卡片 */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;}
+  .card{
+    background:#fff;border-radius:14px;padding:28px 24px;
+    box-shadow:0 4px 20px rgba(0,0,0,.06);border-top:4px solid var(--green);
+    transition:transform .18s, box-shadow .18s;
+  }
+  .card:hover{transform:translateY(-4px);box-shadow:0 10px 28px rgba(0,0,0,.1);}
+  .card .icon{font-size:34px;margin-bottom:12px;}
+  .card h3{font-size:19px;margin-bottom:10px;color:var(--green-dark);}
+  .card p{font-size:14px;color:var(--muted);}
+
+  /* 产品列表 */
+  .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;}
+  .prod{
+    background:var(--green-light);border-radius:12px;padding:20px;
+    text-align:center;font-size:15px;font-weight:600;color:var(--green-dark);
+  }
+  .prod small{display:block;font-weight:400;color:var(--muted);margin-top:4px;font-size:13px;}
+
+  /* 服务对象 */
+  .audience{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+  .aud{
+    background:#fff;border-radius:12px;padding:24px;border-left:4px solid var(--gold);
+    box-shadow:0 3px 14px rgba(0,0,0,.05);
+  }
+  .aud h4{font-size:17px;margin-bottom:8px;color:var(--green-dark);}
+  .aud p{font-size:14px;color:var(--muted);}
+
+  /* 优势 */
+  .adv{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;}
+  .adv span{
+    background:#fff;border:1px solid #dcebe2;border-radius:30px;
+    padding:10px 22px;font-size:15px;color:var(--green-dark);font-weight:600;
+  }
+
+  /* 联系 */
+  .contact{
+    background:linear-gradient(135deg,var(--green-dark),var(--green));color:#fff;
+    text-align:center;border-radius:18px;padding:50px 30px;
+  }
+  .contact h2{font-size:28px;margin-bottom:12px;}
+  .contact .line{margin:14px 0;font-size:18px;}
+  .contact .line b{color:var(--gold);}
+  .contact a{color:#fff;text-decoration:none;font-weight:700;border-bottom:1px dashed rgba(255,255,255,.5);}
+  .contact .note{margin-top:20px;font-size:13px;opacity:.8;}
+
+  footer{background:#0f2b1a;color:#9db8a8;text-align:center;padding:26px 0;font-size:13px;}
+  footer a{color:#9db8a8;}
+
+  @media(max-width:640px){
+    nav a{display:none;}
+    .hero h1{font-size:28px;}
+    .hero p{font-size:15px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">稻果香农服社<small>种苗 · 农资 · 灌溉 · 农产品</small></div>
+    <nav>
+      <a href="#services">服务</a>
+      <a href="#products">产品</a>
+      <a href="#audience">客户</a>
+      <a href="#contact">联系</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <h1>稻果香农服社</h1>
+    <p style="font-size:16px;opacity:.9;margin-top:-4px;">一站式农业技术服务</p>
+    <p style="font-size:20px;font-weight:700;color:var(--gold);margin-top:10px;letter-spacing:1px;">0基础带你学会种地</p>
+    <p>立足海南、服务全省种植户，从种苗到农资、从灌溉到销售，全程专业护航。</p>
+    <div class="tag">
+      <span>种苗供应</span><span>农资销售</span><span>灌溉工程</span><span>农产品销售</span>
+    </div>
+    <a class="cta" href="#contact">立即咨询 →</a>
+  </div>
+</div>
+
+<!-- 服务范围 -->
+<section id="services">
+  <div class="wrap">
+    <h2 class="sec-title">我们的服务范围</h2>
+    <p class="sec-sub">四大板块，覆盖农业生产的全链条需求</p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🌱</div>
+        <h3>种苗销售</h3>
+        <p>提供百香果、槟榔等优质种苗，货源稳定、品质有保障，助力种植起步。</p>
+      </div>
+      <div class="card">
+        <div class="icon">🧪</div>
+        <h3>农资销售</h3>
+        <p>农药、化肥等农资产品供应，正规渠道、品类齐全，满足不同作物需求。</p>
+      </div>
+      <div class="card">
+        <div class="icon">💧</div>
+        <h3>灌溉规划设计安装</h3>
+        <p>农业灌溉系统从规划、设计到安装一站式服务，节水高效、量身定制。</p>
+      </div>
+      <div class="card">
+        <div class="icon">📦</div>
+        <h3>农产品销售</h3>
+        <p>农产品收购与销售对接，帮助种植户拓宽销路、实现增收。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 产品 -->
+<section id="products" class="alt">
+  <div class="wrap">
+    <h2 class="sec-title">主营产品</h2>
+    <p class="sec-sub">优质货源，诚信经营，欢迎垂询</p>
+    <div class="products">
+      <div class="prod">百香果种苗<small>优质嫁接苗</small></div>
+      <div class="prod">槟榔种苗<small>健康壮苗</small></div>
+      <div class="prod">农药<small>正规品牌</small></div>
+      <div class="prod">化肥<small>多种配方</small></div>
+      <div class="prod">农用灌溉设备<small>滴灌/喷灌等</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- 服务对象 -->
+<section id="audience">
+  <div class="wrap">
+    <h2 class="sec-title">服务对象</h2>
+    <p class="sec-sub">专注服务海南农业种植户</p>
+    <div class="audience">
+      <div class="aud">
+        <h4>🎯 精准客户</h4>
+        <p>海南省内各类农业种植户、种植基地与合作社，尤其是百香果、槟榔等经济作物种植者。</p>
+      </div>
+      <div class="aud">
+        <h4>📍 服务区域</h4>
+        <p>海南省全省范围，无论市县乡镇，均可提供产品配送与技术支持服务。</p>
+      </div>
+      <div class="aud">
+        <h4>🤝 合作价值</h4>
+        <p>从种苗、农资到灌溉和销售全链条对接，帮助种植户降本增效、稳定增收。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 优势 -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="sec-title">为什么选择我们</h2>
+    <p class="sec-sub" style="margin-bottom:30px;">专业 · 诚信 · 全程服务</p>
+    <div class="adv">
+      <span>✅ 货源稳定</span>
+      <span>✅ 品质保障</span>
+      <span>✅ 全省覆盖</span>
+      <span>✅ 一站式服务</span>
+      <span>✅ 技术指导</span>
+    </div>
+  </div>
+</section>
+
+<!-- 联系 -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact">
+      <h2>联系我们</h2>
+      <div class="line">📱 微信：<b>Huixin_Steven</b></div>
+      <div class="line">📞 电话：<a href="tel:13907520103">13907520103</a></div>
+      <div class="line">📍 服务区域：海南省全省</div>
+      <div class="note">欢迎种植户、基地、合作社来电或加微信咨询，我们将第一时间为您服务。</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    稻果香农服社 · 种苗 | 农资 | 灌溉 | 农产品<br>
+    服务海南省全省种植户
+  </div>
+</footer>
+
+</body>
+</html>
